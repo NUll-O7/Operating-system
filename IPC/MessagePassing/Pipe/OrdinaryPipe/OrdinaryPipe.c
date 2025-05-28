@@ -4,7 +4,7 @@
 
 int main() {
     int fd[2];
-    char message[] = "Hello from parent!";
+    char message[] = "Hello from yogi yadav!";
     char buffer[100];
 
     pipe(fd); // fd[0] - read, fd[1] - write
