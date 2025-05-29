@@ -10,3 +10,5 @@ int main() {
     close(fd);
     return 0;
 }
+
+/* mkfifo mypipe */
