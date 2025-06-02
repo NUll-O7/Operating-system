@@ -14,7 +14,7 @@ public class Sorter implements Callable<List<Integer>>{
         arrayToSort=al;
     }
 
-    public List<Integer> call() throwsException{
+    public List<Integer> call() throws Exception{
         if(arrayToSort.size()==1) return arrayToSort;
 
         int mid=arrayToSort.size()/2;
@@ -32,7 +32,7 @@ public class Sorter implements Callable<List<Integer>>{
         Sorter leftSorterArray=new Sorter(leftArray);
         Sorter rightSorterArray=new Sorter(rightArray);
 
-        Executor ex=Executors.newFixedThreadPool(10);
+        ExecutorService ex=Executors.newFixedThreadPool(10);
         // runnable interface -> run() -> ex.execute();
         //callable interface-> call() ->ex.submit()
         Future<List<Integer>> leftArrayFuture=ex.submit(leftSorterArray);
