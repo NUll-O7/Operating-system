@@ -12,7 +12,7 @@ public class client {
         // t.start();
         // dosomething();
 
-        for(int i=0;i<100;i++){
+        for(int i=0;i<1000000;i++){
             NumberPrinter np=new NumberPrinter(i);
             Thread t=new Thread(np);
             t.start();
