@@ -43,6 +43,7 @@ public class Sorter implements Callable<List<Integer>>{
 
         List<Integer>ans=new ArrayList<>();
         int i=0,j=0;
+        
         while(i<sortedLeftArray.size() && j<sortedRightArray.size()){
             if(sortedLeftArray.get(i)<=sortedRightArray.get(j)){
                     ans.add(sortedLeftArray.get(i));
