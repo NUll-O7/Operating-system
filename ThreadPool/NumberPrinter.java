@@ -8,7 +8,8 @@ public class NumberPrinter implements Runnable{
     }
 
     public void run(){
-        System.out.println("Number :"+noToPrint + " Thread :"+Thread.currentThread().getName());
+        System.out.println("Number :"+noToPrint + " Thread :"+
+        Thread.currentThread().getName());
     }
     
 }

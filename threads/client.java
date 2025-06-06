@@ -7,16 +7,16 @@ public class client {
     }
     public static void main(String[]args){
         
+        for(int i=0;i<100000;i++){
+            NumberPrinter np=new NumberPrinter(i);
+            Thread t=new Thread(np);
+            t.start();
+        }
         // HelloWorldPrinter hw=new HelloWorldPrinter();
         // Thread t=new Thread(hw);
         // t.start();
         // dosomething();
 
-        for(int i=0;i<1000000;i++){
-            NumberPrinter np=new NumberPrinter(i);
-            Thread t=new Thread(np);
-            t.start();
-        }
     }
     /*
      * Create a class for task lets take helper class
