@@ -12,7 +12,7 @@ public class client {
 
         t1.start();
         t2.start();
-
+        
         t1.join(); // main thread will stop execution and waits for t1 to finish
         t2.join(); //main thread will stop until t2 is done
 
