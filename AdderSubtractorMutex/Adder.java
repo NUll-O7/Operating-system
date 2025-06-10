@@ -11,11 +11,13 @@ public class Adder implements Runnable{
         lock=l;
     }
     public void run(){
-        for(int i=0;i<=100000;i++){
-            lock.lock();
-            count.value+=i;
-            lock.unlock();
-        }
+        // lock.lock();
+        Synchronized(Count.class){
+            for(int i=0;i<=100000;i++){
+                count.value+=i;
+            }
+        })
+        // lock.unlock();
     }
     
 }
